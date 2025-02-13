@@ -1,53 +1,34 @@
-﻿// Fundamentos de C#
+﻿// Declarando as variáveis do meu sistema
+string[] nomes = new string[2];
+string[] origem = new string[2];
+string[] destino = new string[2];
+string[] data = new string[2]; // DateTime
 
-// Tipos de Dados
-// Entrada e Saída
-// Estruturas Condicionais
+Console.WriteLine("---------------------------");
+Console.WriteLine("Sistema de Passagens Áereas");
+Console.WriteLine("---------------------------");
 
-// Estruturas de Repetição
-// Vetores e Funções
+EfetuarLogin();
 
+Console.WriteLine("Menu Inicial");
+Console.WriteLine("Selecione uma opção: ");
+Console.WriteLine("[1] - Cadastrar uma Passagem");
+Console.WriteLine("[2] - Listar as Passagens");
+Console.WriteLine("[0] - Sair do Sistema");
 
+int opcao = int.Parse(Console.ReadLine());
 
-
-// REPETICAO
-// while - enquanto
-int numero = 1;
-
-//// Enquanto numero for menor que 10
-while(numero < 10)
+switch (opcao)
 {
-   Console.WriteLine(numero);
-    numero++;
+    // Decidir o que fazer quando o cara escolhe uma opcao
 }
 
-//// DO/WHILE
-//bool acertou;
-
-//do
-//{
-//    Console.WriteLine("Qual a idade do SENAI?");
-//    string resposta = Console.ReadLine();
-
-//    if (resposta == "80")
-//    {
-//        Console.WriteLine("Acertou");
-//        acertou = true;
-//    }
-//    else
-//    {
-//        acertou = false;
-//    }
-
-//} while (!acertou);
-// while (acertou == false);
-
-// FOR - Para
-
-// int i = 0 (criando uma variavel que tem valor 0)
-// Na parte central eu decido quando o for se encerra
-// i++ (somando 1 no i)
-for (int i = 0; i < 10; i++)
+static void EfetuarLogin()
 {
-    Console.WriteLine(i);
+    string senhaRecebida;
+    do
+    {
+        Console.WriteLine("Digite sua Senha: ");
+        senhaRecebida = Console.ReadLine();
+    } while (senhaRecebida != "123456");
 }
